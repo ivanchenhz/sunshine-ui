@@ -4,14 +4,18 @@
   "module": "dist/index.mjs",
   "main": "dist/index.js",
   "scripts": {
-    "build": "rollup -c",
+    "build": "NODE_ENV=production rollup -c",
     "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^9.0.0",
+    "autoprefixer": "^10.2.4",
+    "postcss": "^8.2.5",
     "rollup": "^2.0.0",
+    "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-svelte": "^6.0.0",
-    "svelte": "^3.0.0"
+    "svelte": "^3.0.0",
+    "tailwindcss": "^2.0.3"
   },
   "keywords": [
     "svelte"
