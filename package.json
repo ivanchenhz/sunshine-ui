@@ -3,6 +3,8 @@
   "svelte": "src/index.js",
   "module": "dist/index.mjs",
   "main": "dist/index.js",
+  "style": "dist/index.css",
+  "repository": "https://github.com/ivanchenhz/sunshine-ui.git",
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
     "prepublishOnly": "npm run build",
