@@ -6,6 +6,8 @@ module.exports = {
   purge: [
     './src/**/*.svelte',
     './src/**/*.js',
+    './playground/**/*.svelte',
+    './playground/**/*.js',
   ],
   presets: [],
   darkMode: false, // or 'media' or 'class'
