@@ -4,6 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss'
+import svg from 'rollup-plugin-svg'
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -37,6 +38,7 @@ export default {
 		file: 'playground/public/build/bundle.js'
 	},
 	plugins: [
+		svg(),
 		svelte({
 			compilerOptions: {
 				// enable run-time checks when not in production

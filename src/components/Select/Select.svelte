@@ -1,5 +1,5 @@
 <script>
-    import UiInput from '../Input/index.svelte'
+    import Input from '../Input'
     import clickOutside from '../../directives/use/clickOutside'
     import intersecting from '../../directives/use/intersecting'
 
@@ -40,9 +40,9 @@
 <div class="tw-relative"
      use:clickOutside on:clickOutside={() => showOptions = false}>
 
-    <UiInput placeholder="Select" class="tw-bg-white! tw-cursor-pointer"
+    <Input placeholder="Select" class="tw-bg-white! tw-cursor-pointer"
              bind:value={label} {size} {readonly}
-             on:focus={() => showOptions = true} on:change></UiInput>
+             on:focus={() => showOptions = true} on:change></Input>
 
     {#if showOptions}
         <ul use:intersecting={[0, 1]} on:intersecting={handleIntersecting}

@@ -1,5 +1,6 @@
 <script>
-    import Card from '../../src/components/Card/index.svelte'
+    import { Card } from '../../src'
+
 </script>
 
 <Card radius="xl">
@@ -8,7 +9,7 @@
             <slot></slot>
         </div>
 
-        <div class="tw-bg-gray-10 tw-text-gray-70">
+        <div class="tw-bg-gray-10 tw-text-gray-70 tw-overflow-x-auto tw-px-4 tw-py-2">
             <pre>
                 <code class="tw-font-mono tw-text-sm">
                     <slot name="code"></slot>
