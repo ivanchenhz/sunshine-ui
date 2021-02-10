@@ -50,7 +50,7 @@
 
         <Example>
             <Input size="sm" placeholder="Something" class="tw-bg-white!" bind:value={inputValue}>
-                <span slot="prefix">{@html searchSvg}</span>
+                <img src="{searchSvg}" slot="prefix" alt="Search">
             </Input>
             <Input size="md" radius="full" placeholder="You like" class="tw-border-transparent!"
                    on:focus={ () => console.log('focus')} on:blur={() => console.log('blur')}
