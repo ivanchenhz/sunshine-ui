@@ -10,12 +10,14 @@
     "prepublishOnly": "npm run build",
     "playground": "rollup -c 'playground/rollup.config.js' -w",
     "build:playground": "NODE_ENV=production rollup -c 'playground/rollup.config.js'",
-    "start": "sirv playground/public --gzip"
+    "start": "sirv playground/public --gzip",
+    "icons-sprite": "svg-sprite --svg-namespace-classnames false --symbol --symbol-dest ./src/components/Icon --symbol-sprite heroicons.svg node_modules/heroicons/./**/*.svg"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-image": "^2.0.6",
     "@rollup/plugin-node-resolve": "^11.0.0",
+    "@twbs/svg-sprite": "^1.6.1",
     "autoprefixer": "^10.2.4",
     "heroicons": "^0.4.2",
     "postcss": "^8.2.5",
