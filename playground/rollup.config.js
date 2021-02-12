@@ -4,7 +4,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import postcss from 'rollup-plugin-postcss'
-import image from '@rollup/plugin-image';
+import url from '@rollup/plugin-url'
 
 const production = process.env.NODE_ENV === 'production';
 
@@ -38,7 +38,10 @@ export default {
 		file: 'playground/public/build/bundle.js'
 	},
 	plugins: [
-		image(),
+		url({
+			fileName: '[name][extname]',
+			publicPath: '/build/'
+		}),
 		svelte({
 			compilerOptions: {
 				// enable run-time checks when not in production

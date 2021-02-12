@@ -5,6 +5,6 @@
 </script>
 
 <svg class="tw-w-4 tw-h-4">
-    <use xlink:href="{heroicons}#{icon}"/>
+    <use href="{heroicons}#{icon}"/>
 </svg>
 

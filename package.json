@@ -17,6 +17,7 @@
     "@rollup/plugin-commonjs": "^17.1.0",
     "@rollup/plugin-image": "^2.0.6",
     "@rollup/plugin-node-resolve": "^11.0.0",
+    "@rollup/plugin-url": "^6.0.0",
     "@twbs/svg-sprite": "^1.6.1",
     "autoprefixer": "^10.2.4",
     "heroicons": "^0.4.2",

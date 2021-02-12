@@ -2,7 +2,7 @@ import svelte from 'rollup-plugin-svelte'
 import resolve from '@rollup/plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
 import pkg from './package.json'
-import image from '@rollup/plugin-image'
+import url from '@rollup/plugin-url'
 
 const name = pkg.name
     .replace(/^(@\S+\/)?(svelte-)?(\S+)/, '$3')
@@ -16,7 +16,9 @@ export default {
         {file: pkg.main, 'format': 'umd', name}
     ],
     plugins: [
-        image(),
+        url({
+            fileName: '[name][extname]',
+        }),
         svelte(),
         resolve(),
         postcss({
