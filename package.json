@@ -32,7 +32,8 @@
     "tailwindcss": "^2.0.3"
   },
   "keywords": [
-    "svelte"
+    "svelte",
+    "tailwindcss"
   ],
   "files": [
     "src",

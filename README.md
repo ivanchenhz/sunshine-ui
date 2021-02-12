@@ -28,3 +28,4 @@ import { Avatar, Select } from 'sunshine-ui'
 - [x] Input
 - [x] Radio
 - [x] Select
+- [x] Icon
