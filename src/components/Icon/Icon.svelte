@@ -4,7 +4,7 @@
     export let icon
 </script>
 
-<svg class="tw-w-4 tw-h-4">
+<svg class="tw-w-4 tw-h-4 {$$props.class}" style="{$$props.style}">
     <use href="{heroicons}#{icon}"/>
 </svg>
 
