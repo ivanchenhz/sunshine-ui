@@ -10,8 +10,8 @@
     "postbuild": "npm run icons-sprite",
     "prepublishOnly": "npm run build",
     "playground": "rollup -c 'playground/rollup.config.js' -w",
+    "prebuild:playground": "purgesvg --content playground/**/*.svelte src/**/*.svelte --svgs dist/heroicons.svg --out playground/public",
     "build:playground": "NODE_ENV=production rollup -c 'playground/rollup.config.js'",
-    "postbuild:playground": "purgesvg --content playground/**/*.svelte src/**/*.svelte --svgs dist/heroicons.svg --out playground/public",
     "start": "sirv playground/public --gzip",
     "icons-sprite": "svg-sprite --svg-namespace-classnames false --symbol --symbol-dest ./dist --symbol-sprite heroicons.svg node_modules/heroicons/./**/*.svg"
   },
