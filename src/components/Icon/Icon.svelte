@@ -1,10 +1,8 @@
 <script>
-    import heroicons from './heroicons.svg'
-
     export let icon
 </script>
 
 <svg class="tw-inline-block tw-w-4 tw-h-4 {$$props.class}" style="{$$props.style}">
-    <use href="{heroicons}#{icon}"/>
+    <use href="heroicons.svg#{icon}"/>
 </svg>
 

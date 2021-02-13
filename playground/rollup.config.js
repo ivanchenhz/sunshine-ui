@@ -40,7 +40,6 @@ export default {
 	plugins: [
 		url({
 			fileName: '[name][extname]',
-			publicPath: '/build/'
 		}),
 		svelte({
 			compilerOptions: {

@@ -7,11 +7,13 @@
   "repository": "https://github.com/ivanchenhz/sunshine-ui.git",
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
+    "postbuild": "npm run icons-sprite",
     "prepublishOnly": "npm run build",
     "playground": "rollup -c 'playground/rollup.config.js' -w",
     "build:playground": "NODE_ENV=production rollup -c 'playground/rollup.config.js'",
+    "postbuild:playground": "purgesvg --content playground/**/*.svelte src/**/*.svelte --svgs dist/heroicons.svg --out playground/public",
     "start": "sirv playground/public --gzip",
-    "icons-sprite": "svg-sprite --svg-namespace-classnames false --symbol --symbol-dest ./src/components/Icon --symbol-sprite heroicons.svg node_modules/heroicons/./**/*.svg"
+    "icons-sprite": "svg-sprite --svg-namespace-classnames false --symbol --symbol-dest ./dist --symbol-sprite heroicons.svg node_modules/heroicons/./**/*.svg"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
@@ -22,6 +24,7 @@
     "autoprefixer": "^10.2.4",
     "heroicons": "^0.4.2",
     "postcss": "^8.2.5",
+    "purgesvg": "^1.1.0",
     "rollup": "^2.0.0",
     "rollup-plugin-css-only": "^3.1.0",
     "rollup-plugin-livereload": "^2.0.0",
