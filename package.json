@@ -11,10 +11,9 @@
     "prepublishOnly": "npm run build",
     "playground": "rollup -c 'playground/rollup.config.js' -w",
     "build:playground": "NODE_ENV=production rollup -c 'playground/rollup.config.js'",
-    "postbuild:playground": "node run purge-icons-sprite",
+    "postbuild:playground": "node ./purge-svg-sprite.js",
     "start": "sirv playground/public --gzip",
-    "icons-sprite": "svg-sprite --svg-namespace-classnames false --symbol --symbol-dest ./dist --symbol-sprite heroicons.svg node_modules/heroicons/./**/*.svg",
-    "purge-icons-sprite": "node ./purge-svg-sprite.js"
+    "icons-sprite": "svg-sprite --svg-namespace-classnames false --symbol --symbol-dest ./dist --symbol-sprite heroicons.svg node_modules/heroicons/./**/*.svg"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^17.1.0",
