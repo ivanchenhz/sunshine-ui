@@ -8,9 +8,10 @@
   "repository": "https://github.com/ivanchenhz/sunshine-ui.git",
   "scripts": {
     "build": "NODE_ENV=production rollup -c",
-    "postbuild": "npm run icons-sprite",
-    "prepublishOnly": "npm run build",
+    "postbuild": "yarn icons-sprite",
+    "prepublishOnly": "yarn build",
     "playground": "rollup -c 'playground/rollup.config.js' -w",
+    "prebuild:playground": "yarn icons-sprite",
     "build:playground": "NODE_ENV=production rollup -c 'playground/rollup.config.js'",
     "postbuild:playground": "yarn purge-svg-sprite -c 'playground/**/*.svelte' src/**/*.svelte -i dist/heroicons.svg -o playground/public/heroicons.svg",
     "start": "sirv playground/public --gzip",
