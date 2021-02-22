@@ -27,7 +27,7 @@ For icons, need to copy 'sunshine-ui/dist/heroicons.svg' to your public path, (s
 <Icon icon="outline--moon" style="width: 8px; height: 20px"></Icon>
 <Icon icon="solid--moon"></Icon>
 ```
-SVG Sprite, the heroicons.svg is a svg sprite, which means would need to load the whole sprite even only used one icon, if matters could try purge svg. 
+SVG Sprite, the heroicons.svg is a svg sprite, which means would need to load the whole sprite even only used one icon, if matters could try (https://www.npmjs.com/package/purge-svg-sprite) 
 
 
 ### Components
