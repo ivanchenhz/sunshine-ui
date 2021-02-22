@@ -45,7 +45,7 @@
     "src",
     "dist"
   ],
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "A component library, beautiful like sunshine...",
   "license": "MIT",
   "dependencies": {
