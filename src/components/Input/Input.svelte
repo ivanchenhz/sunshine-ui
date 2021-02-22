@@ -12,7 +12,6 @@
     $: sizeClass = formControlSize[size]
     $: fontSizeClass = fontSize[size]
     $: borderRadiusClass = borderRadius[radius]
-    $: paddingClass = $$slots.prefix && 'tw-pl-10'
 </script>
 
 <div class="tw-relative">
@@ -22,10 +21,18 @@
         </span>
     {/if}
 
+    {#if $$slots.suffix}
+        <span class="tw-inline-flex tw-absolute tw-right-3 tw-top-1/2 tw-transform tw--translate-y-1/2">
+            <slot name="suffix"></slot>
+        </span>
+    {/if}
+
     <input
             bind:value
             {placeholder}
-            class="{defaultClass} {sizeClass} {fontSizeClass} {borderRadiusClass} {paddingClass} {$$props.class}"
+            class="{defaultClass} {sizeClass} {fontSizeClass} {borderRadiusClass} {$$props.class}"
+            class:tw-pl-10={$$slots.prefix}
+            class:tw-pr-10={$$slots.suffix}
             style="{$$props.style}"
             {readonly}
             on:focus on:blur on:input on:change

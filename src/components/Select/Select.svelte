@@ -1,5 +1,6 @@
 <script>
     import Input from '../Input'
+    import Icon from '../Icon'
     import clickOutside from '../../directives/use/clickOutside'
     import intersecting from '../../directives/use/intersecting'
 
@@ -16,6 +17,7 @@
         return option.value === value ? 'tw-text-theme-60!' : 'tw-text-current'
     }
     $: optionsBottomClass = optionsBottom ? 'tw-mt-2' : 'tw--mt-2 tw-top-0 tw-transform tw--translate-y-full'
+    $: chevronClass = showOptions ? (optionsBottom ? 'tw-transform tw-rotate-180' : '') : ''
 
     const _option = options.find(option => option.value === value)
     let label = _option && _option.label
@@ -42,7 +44,11 @@
 
     <Input placeholder="Select" class="tw-bg-white! tw-cursor-pointer"
              bind:value={label} {size} {readonly}
-             on:focus={() => showOptions = true} on:change></Input>
+             on:focus={() => showOptions = true} on:change>
+        <span slot="suffix">
+            <Icon icon="outline--chevron-down" class="{chevronClass}"></Icon>
+        </span>
+    </Input>
 
     {#if showOptions}
         <ul use:intersecting={[0, 1]} on:intersecting={handleIntersecting}
