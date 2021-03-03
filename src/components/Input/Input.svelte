@@ -7,6 +7,8 @@
     export let placeholder = ''
     export let readonly = false
 
+    // tw-pl-10 tw-pr-10
+    // for bypassing the purge
     const defaultClass = 'tw-w-full tw-px-4 tw-text-gray-70 tw-placeholder-gray-40 tw-bg-gray-10 tw-border tw-border-solid tw-border-gray-30 hover:tw-border-gray-40 focus:tw-border-theme-60'
 
     $: sizeClass = formControlSize[size]
